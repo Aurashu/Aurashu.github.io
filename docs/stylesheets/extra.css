@@ -1,5 +1,5 @@
 /* 首页流水渐变背景（浅蓝色为主）
-   使用 transform 动画（GPU 合成），避免 background-position 动画导致的卡顿 */
+   背景放大到 400%，让背景位置动画呈现连续"流动"的视觉效果 */
 body::before {
     content: '';
     position: fixed;
@@ -8,12 +8,13 @@ body::before {
     width: 200%;
     height: 200%;
     z-index: -1;
-    background: linear-gradient(-45deg, #9cc9f2, #bcdcf8, #dceefc, #a8d2f6);
-    animation: gradientFlow 18s ease-in-out infinite;
+    background: linear-gradient(-45deg, #7cb9ee, #a8d2f6, #dceefc, #bcdcf8, #9cc9f2, #e3f2fd, #7cb9ee);
+    background-size: 400% 400%;
+    animation: gradientFlow 22s ease infinite;
 }
 
 @keyframes gradientFlow {
-    0% { transform: translate(0, 0); }
-    50% { transform: translate(15%, 7.5%); }
-    100% { transform: translate(0, 0); }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
