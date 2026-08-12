@@ -24,5 +24,12 @@ theme:
 nav:
   - 主页: index.md
   - 课程: course/index.md
+  - 随笔: 
+    - 随笔首页: essay/index.md
+    - 行者无疆: essay/travel/index.md
+    - 光影留痕: essay/film/index.md
+    - 笔墨生香: essay/book/index.md
+    - 社会百态: essay/society/index.md
+    - 生活点滴: essay/life/index.md
   - 友链: friends/index.md
   - 关于: about/index.md
